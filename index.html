@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Benny and the Warsaband</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+    </head>
+    <body>
+		<div class="container">
+			<div id="ri-grid" class="ri-grid ri-grid-size-3">
+				<ul id="image-list">
+					<li><a href="#"><img src="images/1.jpg"/></a></li>
+					<li><a href="#"><img src="images/2.jpg"/></a></li>
+					<li><a href="#"><img src="images/3.jpg"/></a></li>
+					<li><a href="#"><img src="images/4.jpg"/></a></li>
+					<li><a href="#"><img src="images/5.jpg"/></a></li>
+					<li><a href="#"><img src="images/6.jpg"/></a></li>
+					<li><a href="#"><img src="images/7.jpg"/></a></li>
+					<li><a href="#"><img src="images/8.jpg"/></a></li>
+					<li><a href="#"><img src="images/9.jpg"/></a></li>
+					<li><a href="#"><img src="images/10.jpg"/></a></li>
+					<li><a href="#"><img src="images/11.jpg"/></a></li>
+					<li><a href="#"><img src="images/12.jpg"/></a></li>
+					<li><a href="#"><img src="images/13.jpg"/></a></li>
+					<li><a href="#"><img src="images/14.jpg"/></a></li>
+					<li><a href="#"><img src="images/15.jpg"/></a></li>
+					<li><a href="#"><img src="images/16.jpg"/></a></li>
+					<li><a href="#"><img src="images/17.jpg"/></a></li>
+					<li><a href="#"><img src="images/18.jpg"/></a></li>
+					<li><a href="#"><img src="images/19.jpg"/></a></li>
+					<li><a href="#"><img src="images/20.jpg"/></a></li>
+					<li><a href="#"><img src="images/21.jpg"/></a></li>
+					<li><a href="#"><img src="images/22.jpg"/></a></li>
+					<li><a href="#"><img src="images/23.jpg"/></a></li>
+					<li><a href="#"><img src="images/24.jpg"/></a></li>
+					<li><a href="#"><img src="images/25.jpg"/></a></li>
+					<li><a href="#"><img src="images/26.jpg"/></a></li>
+					<li><a href="#"><img src="images/27.jpg"/></a></li>
+					<li><a href="#"><img src="images/28.jpg"/></a></li>
+					<li><a href="#"><img src="images/29.jpg"/></a></li>
+					<li><a href="#"><img src="images/30.jpg"/></a></li>
+					<li><a href="#"><img src="images/31.jpg"/></a></li>
+					<li><a href="#"><img src="images/32.jpg"/></a></li>
+					<li><a href="#"><img src="images/33.jpg"/></a></li>
+					<li><a href="#"><img src="images/34.jpg"/></a></li>
+					<li><a href="#"><img src="images/35.jpg"/></a></li>
+					<li><a href="#"><img src="images/36.jpg"/></a></li>
+					<li><a href="#"><img src="images/37.jpg"/></a></li>
+					<li><a href="#"><img src="images/38.jpg"/></a></li>
+					<li><a href="#"><img src="images/39.jpg"/></a></li>
+					<li><a href="#"><img src="images/40.jpg"/></a></li>
+					<li><a href="#"><img src="images/41.jpg"/></a></li>
+					<li><a href="#"><img src="images/42.jpg"/></a></li>
+					<li><a href="#"><img src="images/43.jpg"/></a></li>
+					<li><a href="#"><img src="images/44.jpg"/></a></li>
+					<li><a href="#"><img src="images/45.jpg"/></a></li>
+					<li><a href="#"><img src="images/46.jpg"/></a></li>
+					<li><a href="#"><img src="images/47.jpg"/></a></li>
+					<li><a href="#"><img src="images/48.jpg"/></a></li>
+					<li><a href="#"><img src="images/49.jpg"/></a></li>
+					<li><a href="#"><img src="images/50.jpg"/></a></li>
+					<li><a href="#"><img src="images/51.jpg"/></a></li>
+					<li><a href="#"><img src="images/52.jpg"/></a></li>
+					<li><a href="#"><img src="images/53.jpg"/></a></li>
+					<li><a href="#"><img src="images/54.jpg"/></a></li>
+				</ul>
+			</div>
+        </div>
+
+        <div class="title">BENNY</br>&</br>THE</br>WARSABAND</div>
+
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+			      $('#image-list').each(function(){
+			            // get current ul
+			            var $ul = $(this);
+			            // get array of list items in current ul
+			            var $liArr = $ul.children('li');
+			            // sort array of list items in current ul randomly
+			            $liArr.sort(function(a,b){
+			                  // Get a random number between 0 and 10
+			                  var temp = parseInt( Math.random()*10 );
+			                  // Get 1 or 0, whether temp is odd or even
+			                  var isOddOrEven = temp%2;
+			                  // Get +1 or -1, whether temp greater or smaller than 5
+			                  var isPosOrNeg = temp>5 ? 1 : -1;
+			                  // Return -1, 0, or +1
+			                  return( isOddOrEven*isPosOrNeg );
+			            })
+			            // append list items to ul
+			            .appendTo($ul);            
+			      });
+			});
+
+			$(function() {
+			
+				$( '#ri-grid' ).gridrotator( {
+					rows : 5,
+					columns : 8,
+					maxStep : 5,
+					interval : 2000,
+					onhover : true,
+					animType : "random",
+					animSpeed: 500,
+					w1024 : {
+						rows : 5,
+						columns : 6
+					},
+					w768 : {
+						rows : 5,
+						columns : 5
+					},
+					w480 : {
+						rows : 6,
+						columns : 4
+					},
+					w320 : {
+						rows : 7,
+						columns : 4
+					},
+					w240 : {
+						rows : 7,
+						columns : 3
+					},
+				} );
+			
+			});
+		</script>
+    </body>
+</html>
