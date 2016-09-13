@@ -137,8 +137,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  
-  font-size: 6em;
+
+  font-size: 8vw;
   font-family: helvetica;
   font-weight: bold;
   color: white;
